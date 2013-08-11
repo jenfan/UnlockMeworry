@@ -1,0 +1,242 @@
+/*Theme Name: AIESECA
+Theme URI: http://aiesec-moscow.org
+Description:  theme for AIESEC Moscow local committee. to see what aiesec is watch aiesec.org
+Version: 0.1
+Author: FruityFree
+Author URI:  FruityFree.org
+
+*/
+.alignleft {
+float: left;
+}
+.alignright {
+float: right;
+}
+.aligncenter {
+display:block;
+margin: 0 auto;
+}
+.wp-caption {
+border: 1px solid #ddd;
+text-align: center;
+background-color: #f3f3f3;
+padding-top: 4px;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+.wp-caption p.wp-caption-text {
+font-size: 11px;
+line-height: 17px;
+padding: 0 4px 5px;
+}
+
+   body{
+   font: 11pt Verdana, Arial, Helvetica,sans-serif;
+   background: url('img/background.jpg');
+   }
+   .container {
+    width: 1000px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+	background: #fff;
+	-moz-box-shadow: 0 0 25px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 25px rgba(0,0,0,0.5); /* Параметры тени */
+   }
+   #header {
+    font-size: 1.0em; /* Размер текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    color: #666; /* Цвет текста */
+	height:220px;
+   }
+   #enter-link{
+   float:right;
+   margin: 0px 10px;
+   }
+   #enter-link a{
+   color: #aaa;
+   /*text-shadow: 1px 1px 2px;*/
+   }
+   #mainlogo{
+   width: 350px;
+   margin: 0px 100px 0px 10px;
+   }
+   #myslider{
+   float: left;
+   }
+   #headerimg{
+   margin-left:510;
+   margin-top: 20px;
+   }
+.social{
+	margin-top: 82px;
+	float: right;
+	}
+.social a img{
+	border:none;
+	}
+.mailer{
+	margin: 54px 25px 0px 0px	;
+	float: right;
+	font-size:14px;
+	font-family:Arial,Helvetica,Geneva,sans-serif;
+	color:#000000;
+	text-align:left;
+	width:240px;
+	}
+	#mailer-form{
+	display:block;margin:0;padding:0;border:1px solid #cccccc;padding:10px;background:#ffffff;
+	}
+	#user-email{
+	font-family:Arial,Helvetica,Geneva,sans-serif;color:#666666;margin:0 0 10px;font-size:14px;width:190px;padding:1px
+	}
+
+
+.top-line-img{
+	height:50px;
+	background: #aaa;
+	display:inline-block;
+	margin:0
+   }
+   #top-line-img1{
+   background: url('img/stripe/stripe_01.jpg');
+   width:350px;
+   }
+   #top-line-img2{
+   background: url('img/stripe/stripe_02.jpg');
+   width:300px;
+   }
+   #top-line-img3{
+   background: url('img/stripe/stripe_03.jpg');
+   width:350px;
+   }
+     #top-line-img1:hover{
+   background: url('img/stripe/stripe2_01.jpg');
+   width:350px;
+   }
+   #top-line-img2:hover{
+   background: url('img/stripe/stripe2_02.jpg');
+   width:300px;
+   }
+   #top-line-img3:hover{
+   background: url('img/stripe/stripe2_03.jpg');
+   width:350px;
+   }
+
+  
+   #sidebar {
+    margin-top: 10px; 
+    width: 220px; /* Ширина слоя */
+    padding: 0 5px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+   }
+   .my-nav-menu a{
+	 color:#eee;
+	 background:#555;
+	height: 35px;
+	line-height: 35px;
+	width: 220px;
+	display: block;
+	border: 1px solid #dcdce9;
+	text-decoration: none;
+	text-align: center;
+	vertical-align:middle;
+   }
+   .my-nav-menu a:hover{
+	background:#3279BB;
+	color:#eee;
+	-webkit-transition-property: background;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+	-moz- и -o-
+	-moz-transition-property: background;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: linear;
+	-o-transition-property: background;
+    -o-transition-duration: 0.3s;
+    -o-transition-timing-function: linear;
+   }
+   .my-nav-menu{
+        list-style: none;
+	padding: 0;
+	margin: 0;
+	}
+	.sub-menu{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 20px;
+	}
+	
+	.sub-menu a{
+	width:200px;
+	}
+	
+   #sidebar {
+	list-style: none;
+   }
+  
+   #content {
+    margin-left: 240px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+   }
+   #footer {
+    color: #777; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: left; /* Отменяем действие float */
+	}
+   #footer a {
+    color: #777; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: left; /* Отменяем действие float */
+	}
+	
+	.post-title{
+	font-size:150%;
+	font-weight: bold;
+	}
+	.post-title  a{
+	color:black;
+	}
+	.post-time{
+	font-size: 80%;
+	color: grey;
+	}
+	
+	.pagination {
+	clear:both;
+	padding:20px 0;
+	position:relative;
+	font-size:11px;
+	line-height:13px;
+	}
+
+	.pagination span, .pagination a {
+	display:block;
+	float:left;
+	margin: 2px 2px 2px 0;
+	padding:6px 9px 5px 9px;
+	text-decoration:none;
+	width:auto;
+	color:#fff;
+	background: #555;
+	}
+
+	.pagination a:hover{
+	color:#fff;
+	background: #3279BB;
+	}
+
+	.pagination .current{
+	padding:6px 9px 5px 9px;
+	background: #3279BB;
+	color:#fff;
+	}
+	
+	#stripe{
+	height:50px;
+	background:#555;
+	display: block;
+	margin: 0px 0 0 0;
+	}

@@ -1,0 +1,14 @@
+/* Overlay */
+#smcf-overlay {width:100% !important; height:100% !important;}
+#smcf-container {left:287px !important;}
+#access {
+	position:absolute;
+	z-index:2000;
+	white-space:normal;
+	width:100%!important;
+	display:block;
+	min-width:1024px;
+	font-size:11px;
+	font-family:'ProximaNova','Trebuchet MS',Tahoma,Arial,sans-serif;
+	line-height:0.5em;
+}
