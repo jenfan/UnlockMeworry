@@ -1491,7 +1491,7 @@ if ( ! function_exists( 'get_product_search_form' ) ) {
 			return;
 		}
 
-		$form = '<form role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '">
+		$form = '<form role="search" method="get" id="searchform" action="">
 			<div>
 				<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
 				<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search for products', 'woocommerce' ) . '" />

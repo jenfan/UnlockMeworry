@@ -24,6 +24,7 @@ if ( empty( $woocommerce_loop['columns'] ) )
 // Increase loop count
 $woocommerce_loop['loop']++;
 ?>
+<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
 <li class="product-category product<?php
     if ( ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] == 0 || $woocommerce_loop['columns'] == 1)
         echo ' first';
@@ -33,7 +34,7 @@ $woocommerce_loop['loop']++;
 
 	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 
-	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+	
 
 		<?php
 			/**
@@ -49,7 +50,7 @@ $woocommerce_loop['loop']++;
 				echo $category->name;
 
 				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
+					echo apply_filters( 'woocommerce_subcategory_count_html', '', $category );
 			?>
 		</h3>
 
@@ -60,8 +61,9 @@ $woocommerce_loop['loop']++;
 			do_action( 'woocommerce_after_subcategory_title', $category );
 		?>
 
-	</a>
+	
 
 	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
 
-</li>
+    </li>
+</a>

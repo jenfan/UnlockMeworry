@@ -25,10 +25,11 @@ $woocommerce->show_messages();
 		<tr>
 			<th class="product-remove">&nbsp;</th>
 			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-name">Услуга / Товар</th>
+			<th class="product-price">Цена</th>
+			<th class="product-quantity">Кол-во</th>
+			<th class="product-subtotal">Итого</th>
+                        <?php //_e( 'Total', 'woocommerce' ); ?>
 		</tr>
 	</thead>
 	<tbody>

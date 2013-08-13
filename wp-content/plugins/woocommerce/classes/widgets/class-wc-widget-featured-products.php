@@ -72,7 +72,7 @@ class WC_Widget_Featured_Products extends WP_Widget {
 		ob_start();
 		extract($args);
 
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Featured Products', 'woocommerce' ) : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters('widget_title', empty($instance['title']) ? 'Популярные услуги' : $instance['title'], $instance, $this->id_base);
 		if ( !$number = (int) $instance['number'] )
 			$number = 10;
 		else if ( $number < 1 )
@@ -97,11 +97,17 @@ class WC_Widget_Featured_Products extends WP_Widget {
 		<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 		<ul class="product_list_widget">
 		<?php while ($r->have_posts()) : $r->the_post(); global $product; ?>
+                <a style="text-decoration: none;" href="<?php echo esc_url( get_permalink( $r->post->ID ) ); ?>" title="<?php echo esc_attr($r->post->post_title ? $r->post->post_title : $r->post->ID); ?>">
+                    <li class="li_feat_product">
+                        <?php echo $product->get_image(); ?>
 
-		<li><a href="<?php echo esc_url( get_permalink( $r->post->ID ) ); ?>" title="<?php echo esc_attr($r->post->post_title ? $r->post->post_title : $r->post->ID); ?>">
-			<?php echo $product->get_image(); ?>
+                        <span class="li_title">
 			<?php if ( $r->post->post_title ) echo get_the_title( $r->post->ID ); else echo $r->post->ID; ?>
-		</a> <?php echo $product->get_price_html(); ?></li>
+                            </span>
+		 <?php echo $product->get_price_html(); ?>
+                        
+                    </li>
+                </a>
 
 		<?php endwhile; ?>
 		</ul>
@@ -166,9 +172,7 @@ class WC_Widget_Featured_Products extends WP_Widget {
 		if ( !isset($instance['number']) || !$number = (int) $instance['number'] )
 			$number = 2;
 ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'woocommerce' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
-
+		
 		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e( 'Number of products to show:', 'woocommerce' ); ?></label>
 		<input id="<?php echo esc_attr( $this->get_field_id('number') ); ?>" name="<?php echo esc_attr( $this->get_field_name('number') ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3" /></p>
 <?php

@@ -66,7 +66,7 @@ msgstr "Новые товары"
 #, fuzzy
 #@ woocommerce
 msgid "Featured products"
-msgstr "Рекомендуемые товары"
+msgstr "Популярные услуги"
 
 #: assets/js/admin/editor_plugin_lang.php:13
 #, fuzzy
@@ -469,7 +469,7 @@ msgstr "Вы не можете добавить такое количество 
 #: woocommerce.php:1176
 #@ woocommerce
 msgid "View Cart &rarr;"
-msgstr "Просмотр корзины &rarr;"
+msgstr "Оформить &rarr;"
 
 #: classes/class-wc-cart.php:842
 #@ woocommerce
@@ -3873,12 +3873,12 @@ msgstr "Показывать список рекомендуемых товар�
 #: classes/widgets/class-wc-widget-featured-products.php:37
 #@ woocommerce
 msgid "WooCommerce Featured Products"
-msgstr "WooCommerce Рекомендуемые товары"
+msgstr "WooCommerce Популярные услуги"
 
 #: classes/widgets/class-wc-widget-featured-products.php:75
 #@ woocommerce
 msgid "Featured Products"
-msgstr "Рекомендуемые товары"
+msgstr "Популярные услуги"
 
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:31
 #@ woocommerce

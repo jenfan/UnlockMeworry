@@ -25,10 +25,6 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 
 	echo $wrap_before;
 
-	if ( ! empty( $home ) ) {
-		echo $before . '<a class="home" href="' . apply_filters( 'woocommerce_breadcrumb_home_url', home_url() ) . '">' . $home . '</a>' . $after . $delimiter;
-	}
-
 	if ( is_category() ) {
 
 		$cat_obj = $wp_query->get_queried_object();

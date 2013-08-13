@@ -627,6 +627,8 @@ section[role="banner"] {
 .widget-area .widget h3 {
 	margin-bottom: 24px;
 	margin-bottom: 1.714285714rem;
+        text-align: right;
+        
 }
 .widget-area .widget p,
 .widget-area .widget li,
@@ -760,6 +762,7 @@ article.sticky .featured-post {
 }
 .entry-content h1,
 .comment-content h1 {
+        font-weight: 500;
 	font-size: 21px;
 	font-size: 1.5rem;
 	line-height: 1.5;
@@ -1423,8 +1426,73 @@ img#wpstats {
 /* =Media queries
 -------------------------------------------------------------- */
 
-/* Minimum width of 600 pixels. */
+@media screen and (min-width: 300px) {
+    body {
+            background-color: #f1f2f3 !important;
+}   
+    .widget-title {padding-top: 7px; margin-bottom: 10px}
+    #facebook-follow-2, #fb_like, #facebook, .fb-follow {
+        width: 100% !important;
+    }
+    body {margin: 10px;}
+    .sub-menu {display: none;}
+    li.wcmenucart-display-right {clear: both; float: none;}
+    #menu-item-116 {float:  none;}
+    .site { vertical-align: top;
+		margin: 0 auto;
+		max-width: 960px;
+		max-width: 71.571428571rem;
+		clear: both;
+                text-align: center;
+                float: none;
+                padding: 0;
+	}
+        .unlock {
+         
+        }
+        .mainsq {
+            margin: 0; 
+            
+        }
+        .sqare {
+                margin-top: 10px;
+		margin: 0 auto;
+		max-width: 960px;
+                max-width: 68.571428571rem;
+		padding: 0 5px;
+		
+	}
+        .div_sqare {
+            margin:0px; 
+            width: 100%; 
+            text-align: center; 
+            display: block; 
+            clear: both;
+        }
+        .first {
+            margin: 0;
+        }
+        .first_sqare {
+            width: 95%;
+        }
+        .second_sqare {
+            width: 95%;
+        }
+        .third_sqare {
+            width: 95%
+        }
+}
+
+
+
+
 @media screen and (min-width: 600px) {
+    body {background-color: #f4f5f6 !important;}
+    #facebook-follow-2, #facebook, .fb-follow {
+    width: 200px !important;
+}
+    li.wcmenucart-display-right {clear: none; float: right}
+    #menu-item-116 {float: right;}
 	.author-avatar {
 		float: left;
 		margin-top: 8px;
@@ -1437,15 +1505,58 @@ img#wpstats {
 	.site { vertical-align: top;
 		margin: 0 auto;
 		max-width: 960px;
-		max-width: 68.571428571rem;
+		max-width: 71.571428571rem;
 		overflow: hidden;
+                clear: both;
+                text-align: center;
+                float: none;
 	}
+        .unlock {
+            clear: both;
+        }
+        .mainsq {
+            height: 405px; 
+            float:left; 
+            margin: 20px 5px; 
+        }
         .sqare {
+                margin-top: 48px;
 		margin: 0 auto;
 		max-width: 960px;
-		max-width: 68.571428571rem;
+                max-width: 68.571428571rem;
 		overflow: hidden;
+                padding: 0 20px;
+		padding: 0 1.457142857rem;
 	}
+        .div_sqare {
+            margin:0px; 
+            width: 100%; 
+            text-align: center; 
+            display: inline-block; 
+            height: 410px; 
+            clear: both;
+        }
+        
+        .first {
+            padding: 0;
+        }
+        
+        .first_sqare {
+            max-width: 49%;
+            padding: 0px;
+            margin-left: 0px;
+            float: left;
+        }
+        .second_sqare {
+            
+            max-width: 46%;
+            padding: 0;
+            margin-left: 4%;
+            float: right;
+        }
+        .third_sqare {
+            display: none;
+        }
 	.site-content {
 		float: left;
 		width: 65.104166667%;
@@ -1493,15 +1604,13 @@ img#wpstats {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-/*       #menu-item-122 > a {display: none; }
-       #menu-item-122  {background-image: url(home_link.png); background-repeat: no-repeat; background-position-y: 13   px; background-size: 18px;  width: 25px; height: 44px; vertical-align: bottom; }
-	*/
+       
         .main-navigation li a:hover {
 		color: #000;
 	}
 	.main-navigation li {
-		margin: 0 40px 0 0;
-		margin: 0 2.857142857rem 0 0;
+		margin: 0 20px 0 0;
+		margin: 0 0.7142857rem 0 0;
 		position: relative;
 	}
 	.main-navigation li ul {
@@ -1521,7 +1630,7 @@ img#wpstats {
 		display: block;
 	}
 	.main-navigation li ul li a {
-		background: #efefef;
+		background: #fff;
 		border-bottom: 1px solid #ededed;
 		display: block;
 		font-size: 11px;
@@ -1598,29 +1707,201 @@ img#wpstats {
 	}
 }
 
-/* Minimum width of 960 pixels. */
-@media screen and (min-width: 960px) {
-	body {
-		background-color: #e6e6e6;
+@media screen and (min-width: 650px) and (max-width: 999px) {
+    .first_sqare {
+            
+            max-width: 46%;
+            padding: 0px;
+            margin: 0 0 0 20px;
+            
+        }
+        .second_sqare {
+            
+            max-width: 46%;
+            padding: 0;
+            margin: 0 20px 0 0;
+            
+        }
+        .third_sqare {
+            display: none;
+            
+        }
+        
+}
+
+/* Minimum width of 800 pixels. */
+@media screen and (min-width: 800px) {
+
+        .first_sqare {
+            max-width: 46%;
+            margin-left: 4%;
+        }
+}
+
+
+/* Minimum width of 1000 pixels. */
+@media screen and (min-width: 1000px) {
+    body {margin: 0px;}
+    .main-navigation li {
+		margin: 0 40px 0 0;
+                margin: 0 2.857142857rem 0 0;
+                position: relative;
 	}
-	body .site {
-                vertical-align: top;
-		padding: 0 40px;
-		padding: 0 2.857142857rem;
-                margin-top: 48px;
-		margin-top: 3.428571429rem;
-		margin-bottom: 48px;
-		margin-bottom: 3.428571429rem;
-		
-	}
+     .first_sqare {
+            width: auto;
+            max-width: 50%;
+            padding: 20px;
+            margin: 0 0 0 20px;
+            float: left;
+            background-image: url(/wp-content/uploads/2013/04/e938e342ec6f8c7282e568cfc5bb61d6-1.png) !important;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .second_sqare {
+            width: auto;
+            max-width: 50%;
+            padding: 0;
+            margin: 0 20px 0 0;
+            float: right;
+        }
+        .mainsq {
+            height: 405px; 
+            float:left; 
+            margin: 20px 5px; 
+            padding: 0 20px !important;
+        }
+}
+
+/* Minimum width of 1280 pixels. */
+@media screen and (min-width: 1280px) {
+    
+           
+    
+.unlock {
+            margin:0px; 
+            box-shadow: none; 
+            padding: 0 40px; 
+            vertical-align: baseline; 
+            width: 440px; 
+            height: 330px;
+        }
+        .mainsq {
+            height: 405px; 
+            float:left; 
+            margin-left: 10px; 
+            padding: 0 40px !important;
+        }
         body .sqare {
-		padding: 0 40px;
+		padding: 0 20px;
 		padding: 0 2.857142857rem;
-		margin-top: 48px;
+		margin-top: 2%;
 		margin-bottom: 12px;
 		
 		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	}
+        .entry-title { margin-top:2% !important; font-weight: 300; font-size: 2rem !important;  padding: 0px !important;}
+        .div_sqare {
+            margin:0px; 
+            width: 100%; 
+            text-align: left; 
+            display: inline-block; 
+            height: 410px; 
+            clear: both;
+        }
+        .second {
+            display: inline-table;
+            margin-left: 8px;
+        }
+        .first_sqare {
+            width: auto;
+            float: left;
+        }
+        .second_sqare {
+            width: auto;
+            float: left;
+        }
+        .third_sqare {
+            display: inherit;
+            
+            float: right;
+        }
+	body .site {
+                vertical-align: top;
+		padding: 0 20px;
+		padding: 0 1.457142857rem;
+                margin-top: 48px;
+		margin-top: 3.428571429rem;
+		
+	}
+}
+
+/* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) {
+    
+      
+	body {
+		background-color: #e6e6e6;
+	}
+        .mainsq {
+            height: 405px; 
+            float:left !important; 
+            margin: 20px 5px; 
+            padding: 0 20px !important;
+        }
+        body .sqare {
+		padding: 0 20px;
+		padding: 0 2.857142857rem;
+		margin-top: 2%;
+		margin-bottom: 12px;
+		
+	}
+        .entry-title { margin-top:2% !important; font-weight: 300; font-size: 2rem !important;  padding: 0px !important;}
+        .div_sqare {
+            margin:0px; 
+            width: 100%; 
+            text-align: center; 
+            display: inline-block; 
+            height: 410px; 
+            clear: both;
+        }
+        .second {
+            display: inline-table;
+        }
+        .first_sqare {
+            width: auto;
+            float: left;
+        }
+        .second_sqare {
+            min-width: 24%;
+            text-align: center;
+            max-width: 39%;
+            float: left;
+        }
+        .third_sqare {
+            display: inherit;
+            text-align: center;
+            max-width: 24%;
+            float: right;
+            padding-left: 8px;
+        }
+	body .site {
+                vertical-align: top;
+		padding: 0 20px;
+		padding: 0 1.457142857rem;
+                margin-top: 48px;
+		margin-top: 3.428571429rem;
+		
+	}
+        .unlock {
+            margin:0px; 
+            box-shadow: none; 
+            padding: 0px; 
+            vertical-align: baseline; 
+            margin-top: 40px !important;
+            width: 400px; 
+            height: 290px;
+        }
+        
 	body.custom-background-empty {
 		background-color: #fff;
 	}
@@ -1758,3 +2039,25 @@ img#wpstats {
 	}
 }
 
+
+.uiList {width: 190px !important;}
+.unlock {
+            margin: 0;
+            box-shadow: none !important; 
+            padding: 0px; 
+            vertical-align: bottom; 
+            overflow: hidden;
+            
+}
+
+
+
+.sqare { 
+    border-color: #e5e5e5 #dbdbdb #d2d2d2;
+    -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 3px; 
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px; 
+    box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    margin-bottom: 5px;
+    
+}
+.uiGrid {width: 320px !important;}

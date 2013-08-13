@@ -15,7 +15,7 @@
 		<div class="site-info" style="text-align: center">
 			Все права защищены. UnlockMe.ru 2012
 		</div><!-- .site-info -->
-                <div style="float:right"> <a href="http://iworry.ru/wp-login.php" >In</a> / 
+                <div style="float:right; display: none;"> <a href="http://iworry.ru/wp-login.php" >In</a> / 
                 <a href="http://iworry.ru/wp-login.php?action=logout&_wpnonce=d96bd29b16" >Out</a></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -1,5 +1,7 @@
 <?php
+
 class WcMenuCart_Settings {
+    
 	
     public function __construct() {
 		global $options;
@@ -264,8 +266,8 @@ class WcMenuCart_Settings {
             <div class="icon32" id="icon-options-general"><br /></div>
 			<h2><?php _e('WooCommerce Menu Cart','wcmenucart') ?></h2>
 				<?php 
-        		//global $options;
-				//print_r($options); //for debugging
+        		global $options;
+				print_r($options); //for debugging
 				//print_r($this->get_menu_array());
 				?>
 
@@ -288,34 +290,8 @@ class WcMenuCart_Settings {
 				jQuery('.pro-icon').show('slow');
 			});
 			</script>
-			<div style="line-height: 20px; background: #F3F3F3;-moz-border-radius: 3px;border-radius: 3px;padding: 10px;-moz-box-shadow: 0 0 5px #ff0000;-webkit-box-shadow: 0 0 5px#ff0000;box-shadow: 0 0 5px #ff0000;padding: 10px;margin:0px auto; font-size: 13.8px;width: 60%;float: left"> 
-<h2><?php _e('Get WooCommerce Menu Cart Pro!','wcmenucart') ?></h2>
-<br>
-<strong><?php _e('Limited Offer:','wcmenucart') ?> <span style="color: red"><?php _e('40% off!','wcmenucart') ?></span></strong>			
-<br>
-<br>
-<?php _e('Includes all the great standard features found in this free version plus:','wcmenucart') ?>
-<br>
-<ul style="list-style-type:circle;margin-left: 40px">
-    <li><?php _e('A choice of over 10 cart icons','wcmenucart') ?></li>
-    <li><?php _e('A fully featured cart details flyout','wcmenucart') ?></li>
-    <li><?php _e('Ability to add cart + flyout for up to 3 menus','wcmenucart') ?></li>
-    <li><?php _e('Ability to add a custom css class','wcmenucart') ?></li>
-    <li><?php _e('Automatic updates on any great new features','wcmenucart') ?></li>
-</ul>
-<?php
-$menucartadmore = '<a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartadmore">';
-printf (__('Need to see more? %sClick here%s to check it out. Add a product to your cart and watch what happens!','wcmenucart'), $menucartadmore,'</a>'); ?><br><br>
-<a class="button button-primary" style="text-align: center;margin: 0px auto" href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartadbuy"><?php _e('Buy Now','wcmenucart') ?></a>
-			</div>
-<div style="line-height: 20px; background: #F3F3F3;-moz-border-radius: 3px;border-radius: 3px;padding: 10px;-moz-box-shadow: 0 0 5px #ff0000;-webkit-box-shadow: 0 0 5px#ff0000;box-shadow: 0 0 5px #ff0000;padding: 10px;margin:0px auto; margin-left: 30px; font-size: 13.8px;width: 30%;float: left">
-<h2><?php _e('Want your CSS customized?','wcmenucart') ?></h2>
-<br>
-<?php _e('We can do that for you! Just click the button below to check it out.','wcmenucart') ?>
-<br><br>
-<a class="button button-primary" style="text-align: center" href="https://wpovernight.com/shop/woocommerce-menu-cart-custom-css/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartcustomcss"><?php _e('Customize my CSS!','wcmenucart') ?></a>
+			
 
-</div>
         </div>
 		<?php
 	}
@@ -356,16 +332,17 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 	        $current = isset( $args['default'] ) ? $args['default'] : '';
 	    }
 
-		$disabled = (isset( $args['disabled'] )) ? ' disabled' : '';
+                $disabled = (!isset( $args['disabled'] )) ? ' disabled' : '';
+            
 	    $html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" size="%4$s"%5$s/>', $id, $menu, $current, $size, $disabled );
-	
+            
 	    // Displays option description.
 	    if ( isset( $args['description'] ) ) {
 	        $html .= sprintf( '<p class="description">%s</p>', $args['description'] );
 	    }
 
-		if (isset( $args['disabled'] )) {
-	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This feature only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartcustomclass">Menu Cart Pro</a></i></span>';
+		if (!isset( $args['disabled'] )) {
+	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This fe2ature only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartcustomclass">Menu Cart Pro</a></i></span>';
 			$html .= '<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-color:white; -moz-opacity: 0; opacity:0;filter: alpha(opacity=0);" class="hidden-input"></div>';
 			$html = '<div style="display:inline-block; position:relative;">'.$html.'</div>';
 		}
@@ -390,7 +367,8 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 		    $current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$disabled = (isset( $args['disabled'] )) ? ' disabled' : '';
+		$disabled = (!isset( $args['disabled'] )) ? ' disabled' : '';
+                
 		
 		$html = sprintf( '<select name="%1$s[%2$s]" id="%1$s[%2$s]"%3$s>', $menu, $id, $disabled );
 	    $html .= sprintf( '<option value="%s"%s>%s</option>', '0', selected( $current, '0', false ), '' );
@@ -403,9 +381,9 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 		if ( isset( $args['description'] ) ) {
 			$html .= sprintf( '<p class="description">%s</p>', $args['description'] );
 		}
-
+                
 		if (isset( $args['disabled'] )) {
-	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This feature only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartflyout">Menu Cart Pro</a></i></span>';
+	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This fea3ture only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartflyout">Menu Cart Pro</a></i></span>';
 			$html .= '<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-color:white; -moz-opacity: 0; opacity:0;filter: alpha(opacity=0);" class="hidden-input"></div>';
 			$html = '<div style="display:inline-block; position:relative;">'.$html.'</div>';
 		}
@@ -432,7 +410,8 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 			    $current = isset( $boxes['default'] ) ? $boxes['default'] : '';
 			}
 			
-			$disabled = (isset( $boxes['disabled'] )) ? ' disabled' : '';
+			$disabled =  '';
+                        
 			
 			$box = sprintf( '<select name="%1$s[%2$s]" id="%1$s[%2$s]"%3$s>', $menu, $id, $disabled);
 		    $box .= sprintf( '<option value="%s"%s>%s</option>', '0', selected( $current, '0', false ), '' );
@@ -445,8 +424,8 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 			if ( isset( $boxes['description'] ) ) {
 				$box .= sprintf( '<p class="description">%s</p>', $boxes['description'] );
 			}
-			if (isset( $boxes['disabled'] )) {
-		        $box .= ' <span style="display:none;" class="pro-feature"><i>'. __('This feature only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartmultiplemenus">Menu Cart Pro</a></i></span>';
+			if (!isset( $boxes['disabled'] )) {
+		        $box .= ' <span style="display:none;" class="pro-feature"><i>'. __('This fea5ture only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartmultiplemenus">Menu Cart Pro</a></i></span>';
 				$box .= '<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-color:white; -moz-opacity: 0; opacity:0;filter: alpha(opacity=0);" class="hidden-input"></div>';
 				$box = '<div style="display:inline-block; position:relative;">'.$box.'</div>';
 			}
@@ -466,7 +445,8 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 	 * @return string      Checkbox field.
 	 */
 	public function checkbox_element_callback( $args ) {
-	    $menu = $args['menu'];
+	    unset($args['disabled']);
+            $menu = $args['menu'];
 	    $id = $args['id'];
 	
 	    $options = get_option( $menu );
@@ -477,7 +457,8 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 	        $current = isset( $args['default'] ) ? $args['default'] : '';
 	    }
 	
-		$disabled = (isset( $args['disabled'] )) ? ' disabled' : '';
+            $disabled = '';
+            
 	    $html = sprintf( '<input type="checkbox" id="%1$s" name="%2$s[%1$s]" value="1"%3$s %4$s/>', $id, $menu, checked( 1, $current, false ), $disabled );
 	
 	    // Displays option description.
@@ -486,7 +467,7 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 	    }
 
 		if (isset( $args['disabled'] )) {
-	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This feature only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartflyout">Menu Cart Pro</a></i></span>';
+	        $html .= ' <span style="display:none;" class="pro-feature"><i>'. __('This fea4ture only available in', 'wcmenucart') .' <a href="https://wpovernight.com/shop/woocommerce-menu-cart-pro/?utm_source=wordpress&utm_medium=menucartfree&utm_campaign=menucartflyout">Menu Cart Pro</a></i></span>';
 			$html .= '<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-color:white; -moz-opacity: 0; opacity:0;filter: alpha(opacity=0);" class="hidden-input"></div>';
 			$html = '<div style="display:inline-block; position:relative;">'.$html.'</div>';
 		}
@@ -551,8 +532,7 @@ printf (__('Need to see more? %sClick here%s to check it out. Add a product to y
 	            $radios .= sprintf( '<td style="padding-top:0" align="center"><input type="radio" class="radio" id="%1$s[%2$s][%3$s]" name="%1$s[%2$s]" value="%3$s"%4$s /></td>', $menu, $id, $key, checked( $current, $key, false ) );
         	} else {
         		$icons .= sprintf( '<td style="padding-bottom:0;font-size:16pt;" align="center"><label for="%1$s[%2$s][%3$s]"><img src="%4$scart-icon-%5$s.png" /></label></td>', $menu, $id, $key, plugins_url( 'images/', dirname(__FILE__) ), $iconnumber);
-				$radio = sprintf( '<input type="radio" class="radio" id="%1$s[%2$s][%3$s]" name="%1$s[%2$s]" value="%3$s" disabled />', $menu, $id, $key);
-				$radio .= '<div style="position:absolute; left:0; right:0; top:0; bottom:0; background-color:white; -moz-opacity: 0; opacity:0;filter: alpha(opacity=0);" class="hidden-input-icon"></div>';
+				$radio = sprintf( '<input type="radio" class="radio" id="%1$s[%2$s][%3$s]" name="%1$s[%2$s]" value="%3$s" />', $menu, $id, $key);
 				$radio = '<div style="display:inline-block; position:relative;">'.$radio.'</div>';
 				
 	            $radios .= '<td style="padding-top:0" align="center">'.$radio.'</td>';

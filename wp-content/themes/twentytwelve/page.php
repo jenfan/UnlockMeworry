@@ -14,7 +14,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+
+
+	<div id="primary"<?php if ($_GET['page_id']!=85) echo 'class="site-content"'; 
+        else echo "style='
+            margin-top:50px;
+            '";?> >
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

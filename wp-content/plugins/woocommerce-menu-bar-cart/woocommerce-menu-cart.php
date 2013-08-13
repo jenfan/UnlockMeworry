@@ -88,7 +88,28 @@ class WcMenuCart {
 		global $options;
 		$classes = 'wcmenucart-display-'.$this->options['items_alignment'];
 
-		$items .= '<li class="'.$classes.'">' . $this->wcmenucart_menu_item() . '</li>';
+		
+                if ( !is_user_logged_in() ){
+                  // что-то сделать
+                  $items .= '<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page';if ($_GET['page_id']==89) {$items.=' current-menu-item page_item current_page_item ';}  $items.= 'page-item-89 menu-item-116"><a href="http://iworry.ru/?page_id=89">Вход</a></li>';
+                } else {
+                  $items .= '<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page ';if ($_GET['page_id']==89) {$items.=' current-menu-item page_item current_page_item ';}  $items.= ' page-item-89 menu-item-116"><a href="http://iworry.ru/?page_id=89">Профиль</a>
+<ul class="sub-menu">
+	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="http://iworry.ru/?page_id=93">Посмотреть заказ</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="http://iworry.ru/?page_id=92">Edit My Address</a></li>
+	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="http://iworry.ru/?page_id=94">Изменить пароль</a></li>
+	<li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="http://iworry.ru/?page_id=95">Выйти</a></li>
+</ul>
+</li>';
+                }
+                
+                $items .= '<li class="'.$classes.'">' . $this->wcmenucart_menu_item() . '
+                    <ul class="sub-menu">
+                        <li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="http://iworry.ru/?page_id=96">Checkout → Pay</a></li>
+                        <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="http://iworry.ru/?page_id=97">Order Received</a></li>
+                    </ul></li>
+                    ';
+                
 		return $items;
 	}
 
@@ -100,7 +121,7 @@ class WcMenuCart {
 	public function wcmenucart_menu_item() {
 		global $woocommerce;
 		global $options;
-	
+                
 		$viewing_cart = __('View your shopping cart', 'wcmenucart');
 		$start_shopping = __('Start shopping', 'wcmenucart');
 		$cart_url = $woocommerce->cart->get_cart_url();
